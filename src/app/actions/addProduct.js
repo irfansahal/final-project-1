@@ -1,4 +1,4 @@
-import { updateTag } from "next/cache";
+"use server";
 import { getBaseUrl } from "../utils/api";
 
 export default async function addproduct(product){
