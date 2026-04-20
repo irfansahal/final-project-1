@@ -1,7 +1,11 @@
 import { updateTag } from "next/cache";
+import { getBaseUrl } from "../utils/api";
 
 export default async function addproduct(product){
-     await fetch(`http://localhost:3000/api/product`, {
+     
+    const baseURL = getBaseUrl();
+
+     await fetch(`${baseURL}/api/product`, {
         method : "POST",
         body : JSON.stringify(product),
         headers : {
